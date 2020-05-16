@@ -40,7 +40,7 @@ namespace activityTracker
 
         }
 
-        private void frmManageTasks_Load(object sender, EventArgs e)
+        private void taskRefresh()
         {
             DataAccess db = new DataAccess();
 
@@ -49,6 +49,16 @@ namespace activityTracker
             users = db.GetUsers();
 
             UpdateBinding();
+        }
+
+        private void frmManageTasks_Load(object sender, EventArgs e)
+        {
+            taskRefresh();
+        }
+
+        private void btnRefresh_Click_1(object sender, EventArgs e)
+        {
+            taskRefresh();
         }
 
         //Navigation buttons
@@ -168,5 +178,6 @@ namespace activityTracker
             objFrmManageTasks.Show();
         }
 
-}
+
+    }
 }

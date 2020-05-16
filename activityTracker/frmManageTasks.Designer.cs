@@ -34,6 +34,8 @@
             this.btnViewMain = new System.Windows.Forms.Button();
             this.btnManageProjects = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnKanban = new System.Windows.Forms.Button();
+            this.btnManageTasks = new System.Windows.Forms.Button();
             this.btnManageSubTasks = new System.Windows.Forms.Button();
             this.lstBoxTasksFound = new System.Windows.Forms.ListBox();
             this.btnAddTask = new System.Windows.Forms.Button();
@@ -66,8 +68,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.lstBoxSelectedTaskInfo = new System.Windows.Forms.ListBox();
             this.lstSelectTask = new System.Windows.Forms.ComboBox();
-            this.btnManageTasks = new System.Windows.Forms.Button();
-            this.btnKanban = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -139,6 +140,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 882);
             this.panel1.TabIndex = 8;
+            // 
+            // btnKanban
+            // 
+            this.btnKanban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(42)))), ((int)(((byte)(134)))));
+            this.btnKanban.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnKanban.FlatAppearance.BorderSize = 5;
+            this.btnKanban.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKanban.ForeColor = System.Drawing.Color.White;
+            this.btnKanban.Location = new System.Drawing.Point(25, 653);
+            this.btnKanban.Name = "btnKanban";
+            this.btnKanban.Size = new System.Drawing.Size(120, 36);
+            this.btnKanban.TabIndex = 43;
+            this.btnKanban.Text = "Kanban Board";
+            this.btnKanban.UseVisualStyleBackColor = false;
+            this.btnKanban.Click += new System.EventHandler(this.btnKanban_Click);
+            // 
+            // btnManageTasks
+            // 
+            this.btnManageTasks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(42)))), ((int)(((byte)(134)))));
+            this.btnManageTasks.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnManageTasks.FlatAppearance.BorderSize = 5;
+            this.btnManageTasks.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageTasks.ForeColor = System.Drawing.Color.White;
+            this.btnManageTasks.Location = new System.Drawing.Point(25, 569);
+            this.btnManageTasks.Name = "btnManageTasks";
+            this.btnManageTasks.Size = new System.Drawing.Size(120, 36);
+            this.btnManageTasks.TabIndex = 42;
+            this.btnManageTasks.Text = "Manage Tasks";
+            this.btnManageTasks.UseVisualStyleBackColor = false;
+            this.btnManageTasks.Click += new System.EventHandler(this.btnManageTasks_Click);
             // 
             // btnManageSubTasks
             // 
@@ -519,35 +550,16 @@
             this.lstSelectTask.Size = new System.Drawing.Size(121, 21);
             this.lstSelectTask.TabIndex = 109;
             // 
-            // btnManageTasks
+            // btnRefresh
             // 
-            this.btnManageTasks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(42)))), ((int)(((byte)(134)))));
-            this.btnManageTasks.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnManageTasks.FlatAppearance.BorderSize = 5;
-            this.btnManageTasks.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageTasks.ForeColor = System.Drawing.Color.White;
-            this.btnManageTasks.Location = new System.Drawing.Point(25, 569);
-            this.btnManageTasks.Name = "btnManageTasks";
-            this.btnManageTasks.Size = new System.Drawing.Size(120, 36);
-            this.btnManageTasks.TabIndex = 42;
-            this.btnManageTasks.Text = "Manage Tasks";
-            this.btnManageTasks.UseVisualStyleBackColor = false;
-            this.btnManageTasks.Click += new System.EventHandler(this.btnManageTasks_Click);
-            // 
-            // btnKanban
-            // 
-            this.btnKanban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(42)))), ((int)(((byte)(134)))));
-            this.btnKanban.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnKanban.FlatAppearance.BorderSize = 5;
-            this.btnKanban.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKanban.ForeColor = System.Drawing.Color.White;
-            this.btnKanban.Location = new System.Drawing.Point(25, 653);
-            this.btnKanban.Name = "btnKanban";
-            this.btnKanban.Size = new System.Drawing.Size(120, 36);
-            this.btnKanban.TabIndex = 43;
-            this.btnKanban.Text = "Kanban Board";
-            this.btnKanban.UseVisualStyleBackColor = false;
-            this.btnKanban.Click += new System.EventHandler(this.btnKanban_Click);
+            this.btnRefresh.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(882, 160);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(61, 23);
+            this.btnRefresh.TabIndex = 110;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
             // 
             // frmManageTasks
             // 
@@ -555,6 +567,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(42)))), ((int)(((byte)(134)))));
             this.ClientSize = new System.Drawing.Size(1106, 613);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.lstSelectTask);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.lstBoxSelectedTaskInfo);
@@ -640,5 +653,6 @@
         private System.Windows.Forms.ComboBox lstSelectTask;
         private System.Windows.Forms.Button btnKanban;
         private System.Windows.Forms.Button btnManageTasks;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

@@ -71,6 +71,7 @@
             this.btnManageTasks = new System.Windows.Forms.Button();
             this.btnViewMain = new System.Windows.Forms.Button();
             this.btnManageSubTasks = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -576,12 +577,24 @@
             this.btnManageSubTasks.UseVisualStyleBackColor = false;
             this.btnManageSubTasks.Click += new System.EventHandler(this.btnManageSubTasks_Click_1);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(955, 190);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(61, 23);
+            this.btnRefresh.TabIndex = 107;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
+            // 
             // frmManageSubTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(42)))), ((int)(((byte)(134)))));
             this.ClientSize = new System.Drawing.Size(1192, 628);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lstBoxSelectedSubTaskInfo);
@@ -672,5 +685,6 @@
         private System.Windows.Forms.Button btnManageTasks;
         private System.Windows.Forms.Button btnViewMain;
         private System.Windows.Forms.Button btnManageSubTasks;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

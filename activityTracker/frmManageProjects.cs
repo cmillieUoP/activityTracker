@@ -30,6 +30,16 @@ namespace activityTracker
 
         private void frmManageProjects_Load(object sender, EventArgs e)
         {
+            projectRefresh();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            projectRefresh();
+        }
+
+        private void projectRefresh()
+        {
             DataAccess db = new DataAccess();
 
             projects = db.GetManageProjects();
@@ -107,11 +117,7 @@ namespace activityTracker
             UpdateBinding();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            InitializeComponent();
-            UpdateBinding();
-        }
+
 
     }
 }

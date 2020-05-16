@@ -23,6 +23,28 @@ namespace activityTracker
             UpdateBinding();
         }
 
+        private void subTaskRefresh()
+        {
+            DataAccess db = new DataAccess();
+
+            tasks = db.GetManageTasks();
+            subTasks = db.GetManageSubTasks();
+            users = db.GetUsers();
+
+            UpdateBinding();
+        }
+
+        private void frmManageSubTasks_Load(object sender, EventArgs e)
+        {
+            subTaskRefresh();
+
+        }
+
+        private void btnRefresh_Click_1(object sender, EventArgs e)
+        {
+            subTaskRefresh();
+        }
+
         //Navigation buttons
         private void btnViewMain_Click_1(object sender, EventArgs e)
         {
@@ -77,17 +99,7 @@ namespace activityTracker
             lstBoxParentTaskID.DisplayMember = "TaskID";
         }
 
-        private void frmManageSubTasks_Load(object sender, EventArgs e)
-        {
-            DataAccess db = new DataAccess();
 
-            tasks = db.GetManageTasks();
-            subTasks = db.GetManageSubTasks();
-            users = db.GetUsers();
-
-            UpdateBinding();
-
-        }
 
         private void btnAddSubTask_Click(object sender, EventArgs e)
         {
